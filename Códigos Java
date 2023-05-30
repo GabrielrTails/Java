@@ -1,0 +1,37 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		Double num1, num2, num3, media, soma = 0.0;
+		int numx, i = 1;
+		Scanner n = new Scanner(System.in);
+		System.out.println("Insira a quantidade de notas: ");
+		numx = n.nextInt();
+		while(i<=numx){
+		    System.out.println("Insira a nota "+i);
+		    soma = soma+n.nextDouble();
+		    i++;
+		}
+		media = (soma)/numx;
+		if(media>=6){
+		    System.out.println("Aprovado!\nmedia: "+media);
+		}else{
+		    System.out.println("Reprovado\nmedia: "+media);
+		}
+	}
+}
+
+------------
+
+public class Relogio{
+    public static void main(String[] args){
+        int h, m, s;
+        for(h=0; h<=23; h++){
+            for(m=0; m<= 59; m++){
+                for(s=0; s<=59; s++){
+                    System.out.println("h: "+h +" m: "+m + " s: "+s);
+                }
+            }
+        }
+    }
+}
