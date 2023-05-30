@@ -1,0 +1,12 @@
+1. programa que o usuario insira 3 nomes de pessoas e insira 4 notas dos alunos e execute a media
+	-cada aluno possui 4 matérias: artes, física, libras e astronomia
+	-no final deve aparecer na tela: nome, disciplinas, nota e média.
+	-valor 500pts entrega e demonstração dia: 24/05
+
+feito
+ExerJava1.java
+/root/'java classes'/
+
+
+
+//a classe é o arquivo fonte do compilado, que também tem o código, é aonde se edita, compila e roda.
