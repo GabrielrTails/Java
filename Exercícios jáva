@@ -1,0 +1,155 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+		float num1, num2, num3, soma23;
+		Scanner n = new Scanner(System.in);
+		System.out.println("Insira 3 numeros: ");
+		num1 = n.nextFloat();
+		num2 = n.nextFloat();
+		num3 = n.nextFloat();
+		soma23 = num2+num3;
+		if(num1>soma23){
+		    System.out.println("O primeiro número é maior do que a soma dos 2 últimos");
+		}else{
+		    System.out.println("O primeiro número é menor do que a soma dos 2 últimos");
+		}
+	}
+}
+---
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+        int velMaxRua, velCarro, dif;
+        Scanner n = new Scanner(System.in);
+        System.out.println("Insira a velocidade máxima da Rua: ");
+        velMaxRua = n.nextInt();
+        System.out.println("Insira a velocidade do Carro: ");
+        velCarro = n.nextInt();
+        dif = velCarro-velMaxRua;
+        if(dif<=10){
+            System.out.println("Multa: 50,00 R$");
+        }else if(dif>10&&dif<=30){
+            System.out.println("Multa: 100,00 R$");
+        }else{
+            System.out.println("Apreensão do veículo");
+        }
+
+    }
+}
+---
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    int pivot, i;
+	    int[] array = {0, 0, 0};
+		Scanner n = new Scanner(System.in);
+		System.out.println("Insira 3 numeros desordenados: ");
+		array[0] = n.nextInt();
+		array[1] = n.nextInt();
+		array[2] = n.nextInt();
+		pivot = array[0];
+		if(pivot>array[1]){
+		 array[0] = array[1];
+		 array[1] = pivot;
+		}else if (array[2]<array[1]){
+		    pivot = array[2];
+		    array[1] = array[2];
+		    array[2] = pivot;
+		}
+		System.out.println("Numeros em ordem: ");
+		for(i=0; i<=2; i++){
+        System.out.println(array[i]);
+		}
+	}
+}
+---
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner n = new Scanner(System.in);
+	    double ano;
+	    boolean bissexto = false;
+		System.out.println("Informe um ano D.C: ");
+		ano = n.nextInt();
+		
+		//divisivel por 4? mod = 0, se n por 100 mod=-0
+  if (ano % 4 != 0) {
+    bissexto = false;
+  } else if (ano % 400 == 0) {
+    bissexto = true;
+  } else if (ano % 100 == 0) {
+    bissexto = false;
+  } else {
+    bissexto = true;
+  }
+		System.out.println("bissexto: "+bissexto);
+	}
+}
+
+import java.util.Scanner;
+public class Main{
+    
+    static void calculadora(){
+        double calc;
+        int choose;
+	    double num1;
+	    double num2;
+	    Scanner n = new Scanner(System.in);
+        System.out.println("Bem vindo à Calculadora, digite 2 números: ");
+        num1 = n.nextDouble();
+        num2 = n.nextDouble();
+        System.out.println("escolha sua operação:\n1.Soma\n2.Subtração\n3.Multiplicação\n4.Divisão\n>");
+        choose = n.nextInt();    
+        //
+		switch(choose){
+		    case 1: 
+                calc = num1 + num2;
+                System.out.println("O resultado é: "+calc);
+                break;
+		    case 2: 
+		        if(num1<=0 || num2<=0){
+		            System.out.println("Número(s) Inválido(s)");
+		        }else{
+                calc = num1 - num2;
+                System.out.println("O resultado é: "+calc);
+                break;
+		        }   
+		    case 3: 
+                calc = num1 * num2;
+                System.out.println("O resultado é: "+calc);
+                break;
+		    case 4:
+		        if(num1<=0 || num2<=0){
+		            System.out.println("Número(s) Inválido(s)");
+		        }else{
+                calc = num1 / num2;
+                System.out.println("O resultado é: "+calc);
+                break;
+		        }
+
+		}
+		
+    }
+
+    public static void main(String[] args) {
+        int ss = 0;
+        int i;
+        boolean aa = true;
+        Scanner e = new Scanner(System.in);
+	    calculadora();
+    	while(aa){
+	    System.out.println("Deseja reiniciar o código?\n1. Sim\n2. Não\n");
+	    ss = e.nextInt();
+	    switch(ss){
+	        case 1:
+	            calculadora();
+	        case 2:
+	            aa = false;
+	    }
+    	}
+}
+}
